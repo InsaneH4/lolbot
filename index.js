@@ -10,7 +10,8 @@ client.on("messageCreate", function (message) {
     const args = commandBody.split(' ')
     const command = args.shift().toLowerCase()
     const help = "Welcome to lolbot\nAvailable commands:\nlol.ping: returns the amount of time it took to send a " +
-        "message\n" + "lol.joke: you'll see\nlol.rick: rickroll someone XD"
+        "message\n" + "lol.joke: you'll see\nlol.rick: rickroll someone XD\nlol.meme: enter 2 text values " +
+        "seperated by a comma, formats text like a meme"
     if (command === "ping" && message.content.startsWith(prefix)) {
         const timeTaken = Date.now() - message.createdTimestamp
         message.reply(`Pong! This message had a latency of ${timeTaken}ms.`)
