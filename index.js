@@ -27,7 +27,8 @@ client.on("messageCreate", function (message) {
     }
     if (command === "meme" && message.content.startsWith(prefix)) {
         let topText = message.content.substring(message.content.indexOf(' '), message.content.indexOf(','))
-        let bottomText = message.content.substring(message.content.indexOf(',' + 1))
+        let bottomText = message.content.substring(message.content.indexOf(','))
+        bottomText.replace(',', '')
         let meme = topText + "\n\n\n\n\n" + bottomText
         message.channel.send(meme)
     }
