@@ -25,6 +25,12 @@ client.on("messageCreate", function (message) {
     if (command === "deez" && message.content.startsWith(prefix)) {
         message.channel.send("nuts")
     }
+    if (command === "meme" && message.content.startsWith(prefix)) {
+        let topText = message.content.substring(message.content.indexOf(' '), message.content.indexOf(','))
+        let bottomText = message.content.substring(message.content.indexOf(','))
+        let meme = topText + "\n\n\n\n\n" + bottomText
+        message.channel.send(meme)
+    }
     if (command === "help" && message.content.startsWith(prefix)) {
         message.reply(help)
     }
