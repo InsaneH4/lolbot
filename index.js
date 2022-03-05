@@ -30,7 +30,7 @@ client.on("messageCreate", function (message) {
         let topText = message.content.substring(message.content.indexOf(' '), message.content.indexOf(','))
         let bottomText = message.content.substring(message.content.indexOf(','))
         bottomText = bottomText.replaceAll(',', '')
-        let meme = topText + "\n\n\n\n\n" + bottomText
+        let meme = topText + "\n\n" + bottomText
         message.channel.send(meme)
     }
     if (command === "help" && message.content.startsWith(prefix)) {
