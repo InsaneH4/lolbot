@@ -2,7 +2,8 @@ require("dotenv").config();
 const Discord = require('discord.js')
 const client = new Discord.Client({intents: ["GUILDS", "GUILD_MESSAGES"]})
 const token = process.env['TOKEN']
-client.login(token)
+client.login(token).then(() => {
+})
 client.on("messageCreate", function (message) {
     const prefix = "lol.";
     if (message.author.bot) return
@@ -14,7 +15,8 @@ client.on("messageCreate", function (message) {
         "seperated by a comma, formats text like a meme"
     if (command === "ping" && message.content.startsWith(prefix)) {
         const timeTaken = Date.now() - message.createdTimestamp
-        message.reply(`Pong! This message had a latency of ${timeTaken}ms.`)
+        message.reply(`Pong! This message had a latency of ${timeTaken}ms.`).then(() => {
+        })
     }
     if (command === "joke" && message.content.startsWith(prefix)) {
         message.channel.send("the gcc")
@@ -34,13 +36,15 @@ client.on("messageCreate", function (message) {
         message.channel.send(meme)
     }
     if (command === "help" && message.content.startsWith(prefix)) {
-        message.reply(help)
+        message.reply(help).then(() => {
+        })
     }
     /*if (message.author.id === "654782443475435550") {
         message.reply("hi omar")
     }
      */
     if (message.content.includes("*you're") || message.content.includes("*your")) {
-        message.reply("nobody cares!")
+        message.reply("nobody cares!").then(() => {
+        })
     }
 })
