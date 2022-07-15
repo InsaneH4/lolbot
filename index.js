@@ -39,10 +39,9 @@ client.on("messageCreate", function (message) {
         message.reply(help).then(() => {
         })
     }
-    /*if (message.author.id === "654782443475435550") {
+    if (message.author.id === "654782443475435550") {
         message.reply("hi omar")
     }
-     */
     if (message.content.includes("*you're") || message.content.includes("*your")) {
         message.reply("nobody cares!").then(() => {
         })
