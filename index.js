@@ -15,8 +15,7 @@ client.on("messageCreate", function (message) {
         "seperated by a comma, formats text like a meme"
     if (command === "ping" && message.content.startsWith(prefix)) {
         const timeTaken = Date.now() - message.createdTimestamp
-        message.reply(`Pong! This message had a latency of ${timeTaken}ms.`).then(() => {
-        })
+        message.reply(`Pong! This message had a latency of ${timeTaken}ms.`)
     }
     if (command === "joke" && message.content.startsWith(prefix)) {
         message.channel.send("the gcc")
@@ -36,14 +35,12 @@ client.on("messageCreate", function (message) {
         message.channel.send(meme)
     }
     if (command === "help" && message.content.startsWith(prefix)) {
-        message.reply(help).then(() => {
-        })
+        message.reply(help)
     }
-    if (message.author.id === "654782443475435550") {
-        message.reply("hi omar")
+    if (message.author.id === "436688264435597343") {
+        message.channel.send("hi anders")
     }
     if (message.content.includes("*you're") || message.content.includes("*your")) {
-        message.reply("nobody cares!").then(() => {
-        })
+        message.channel.send("nobody cares!")
     }
 })
