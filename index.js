@@ -37,9 +37,9 @@ client.on("messageCreate", function (message) {
     if (command === "help" && message.content.startsWith(prefix)) {
         message.reply(help)
     }
-    if (message.author.id === "436688264435597343") {
+    /*if (message.author.id === "436688264435597343") {
         message.channel.send("hi anders")
-    }
+    }*/
     if (message.content.includes("*you're") || message.content.includes("*your")) {
         message.channel.send("nobody cares!")
     }
